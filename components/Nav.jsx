@@ -7,7 +7,7 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 import Provider from "./Provider";
 
 const Nav = () => {
-  const isUserLoggedIn = false;
+  const isUserLoggedIn = true;
   const [providers, setProviders] = useState(null);
   const [toggleDropdown, setToggleDropdown] = useState(false);
 
@@ -55,6 +55,7 @@ const Nav = () => {
           </div>
         ) : (
           <>
+            {console.log("desktop nav second")}
             {providers &&
               Object.values(providers).map((provider) => (
                 <button
